@@ -23,8 +23,8 @@ def question2(data):
     topk_exact = data.get_top_songs_exact(K)
     print("Exact Query time: ", datetime.now() - time)
     print("\n")
-    epsilon = 0.05
-    delta = 0.05
+    epsilon = 0.01
+    delta = 0.01
     sketch = PlaceHolder(epsilon, delta, K)
     data.generate_data_approximate(sketch)
     time = datetime.now()
